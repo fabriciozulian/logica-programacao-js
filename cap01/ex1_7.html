@@ -39,12 +39,13 @@ Criar um programa onde lê o valor total de um jantar, exibe o valor do jantar, 
          taxa = jantar * 0.1;
          jantarTotal = jantar + taxa;
     }
-
+    
+    //utilizando função toFixed(2) para exibir o valor com duas cadas depois da virgula
     function exibirValores()
     {
-        document.getElementById("_valorJantar").innerHTML = `${jantar.toString()}`;
-        document.getElementById("_valorTaxa").innerHTML = `${taxa.toString()}`;
-        document.getElementById("_valorTotal").innerHTML = `${jantarTotal.toString()}`;
+        document.getElementById("_valorJantar").innerHTML = `${jantar.toFixed(2)}`;
+        document.getElementById("_valorTaxa").innerHTML = `${taxa.toFixed(2)}`;
+        document.getElementById("_valorTotal").innerHTML = `${jantarTotal.toFixed(2)}`;
     }
 
     function calcularNovamente()
