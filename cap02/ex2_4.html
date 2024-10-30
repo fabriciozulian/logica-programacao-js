@@ -1,0 +1,27 @@
+<!-- Elabore um programa para um restaurante que leia o preço por kg e o sumo em gramas de um cliente. Exiba o valor a ser pago-->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante JS</title>
+</head>
+<body>
+    <h1>Restaurante JS</h1>
+    <form>
+        <p>
+            Buffet por Quilo R$ 
+            <input type="text" id="inPrecoQuilo" step="0.01" required>
+        </p>
+        <p>
+            Consumo do cliente
+            <input type="text" id="inConsumoCliente" min="0" required>
+        </p>
+        <input type="submit" value="Calcular Preço">
+    </form>
+    <h2 id="inValorTotal"></h2>
+    <script src="js/ex2_4.js"></script>
+</body>
+</html>
