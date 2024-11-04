@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form id="calculadoraDisplay" onsubmit="return false;"> <!-- Previne o envio do formulário -->
+        <p>
+            Selecione a operação que deseja realizar:
+            <button type="button" onclick="inSomar()">+</button>
+            <button type="button" onclick="inSubtrair()">-</button>
+            <button type="button" onclick="inMultiplicar()">x</button>
+            <button type="button" onclick="inDividir()">/</button>
+        </p>
+    </form>
+    <div id="calculadoraCalculo">
+        <input type="number" id="inPrimeiroNumero">
+        <h3 id="inOperacao"></h3>
+        <input type="number" id="inSegundoNumero">
+        <button onclick="Calcular()">Calcular</button> <!-- Chama a função Calcular -->
+        <h3 id="inResultado"></h3>
+    </div> 
+    <script src="calculadora.js"></script>
+</body>
+</html>
