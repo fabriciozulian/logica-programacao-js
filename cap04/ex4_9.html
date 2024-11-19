@@ -1,0 +1,25 @@
+<!-- Elaborar um programa para simular um parquímetro, o qual leia o valor de moedas depositado em um terminal de estacionamento rotativo. O programa deve informar o tempo de permanência do veículo no local e o troco (se existir), Se o valor for inferior ao tempo mínimo, exiba a mensagem "Valor Insuficiente". Considerar valores da tabela (o máximo é 120min) -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Programa Parquímetro</title>
+</head>
+<body>
+    <img src="img/exerc.jpg">
+    <h1>Programa Parquímetro</h1>
+    <form>
+        <p>
+            Valor R$: 
+            <input type="float" id=inValor>
+        </p>
+        <input type="submit" value="Confirmar Depósito">
+    </form>
+    <h3 id="tempo"></h3>
+    <h3 id="troco"></h3>
+    <script src="js/ex4_9.js"></script>
+</body>
+</html>
