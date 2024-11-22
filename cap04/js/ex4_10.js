@@ -9,7 +9,7 @@ frm.addEventListener("submit", (e) => {
 
     if(verificarTriangulo(a,b,c) == true){
         let tipoTriangulo = verificaTipoTriangulo(a,b,c);
-        result.innerText = `Lados podem formar um triângulo <br> Tipo:${tipoTriangulo}`;
+        result.innerHTML = `Lados podem formar um triângulo <br> Tipo:${tipoTriangulo}`;
     }else{
         result.innerText = `Lados não podem formar um triângulo`;
     }
