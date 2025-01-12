@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Exemplo dois, realizando apenas pelo console-->
+    <script>
+        const nomeProduto = prompt("Digite o nome do produto: ");
+        const qtEtiqueta = prompt("Digite a quantidade de etiquetas");
+        let num = Number(qtEtiqueta);
+        while(num !== 0){
+            if(num>2){
+                console.log(`${nomeProduto}      ${nomeProduto}`);
+                num -=2;
+            } else{
+                console.log(`${nomeProduto}`);
+                num -=1;
+            }
+        }
+    </script>
+</body>
+</html>
