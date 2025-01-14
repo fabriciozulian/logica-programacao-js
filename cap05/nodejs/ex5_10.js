@@ -2,7 +2,7 @@ const frm = document.querySelector("form");
 const resultado = document.getElementById("inResultado");
 
 frm.addEventListener("submit", (e) => {
-    
+
     const numero = Number(document.getElementById("inNumero").value);
     
     if (isNaN(numero) || numero <= 0) {
@@ -14,6 +14,7 @@ frm.addEventListener("submit", (e) => {
 
     for (let i = 1; i < numero; i++) {
         if (numero % i === 0) {
+            console.log(i);
             somaDivisores += i;
         }
     }
