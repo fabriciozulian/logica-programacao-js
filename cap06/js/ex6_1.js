@@ -7,18 +7,28 @@ var emAtendimento;
 
 //Adicionar um novo paciente na fila
 frm.btAdicionar.addEventListener("click", ()=> {
-    let x = frm.inPaciente.value;
-    pacientes.push(x);
-    frm.inPaciente.value = "";
-    exibirLista();
+    if (frm.checkValidity()) {
+        let x = frm.inPaciente.value;
+        pacientes.push(x);
+        frm.inPaciente.value = "";
+        exibirLista();
+      } else {
+        frm.reportValidity();
+      }
+  
 })
 
 //Adiciona um paciente na fila de urgênte
 frm.btAdicionarUrgente.addEventListener("click", () => {
-    let x = frm.inPaciente.value;
-    pacientesUrgentes.push(x);
-    frm.inPaciente.value = "";
-    exibirLista();
+    if (frm.checkValidity()){
+        let x = frm.inPaciente.value;
+        pacientesUrgentes.push(x);
+        frm.inPaciente.value = "";
+        exibirLista();
+    } else {
+        frm.reportValidity();
+    }
+    
 })
 
 //Verifica se tem pacientes urgentes e atende 
