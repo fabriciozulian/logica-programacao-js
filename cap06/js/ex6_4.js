@@ -8,24 +8,40 @@ frm.addEventListener("submit", (e) => {
         const nome = frm.inNome.value;
         const idade = Number(frm.inIdade.value);
         criancas.push({nome: nome, idade: idade});
-        alert("Criança adicionada!")
+        alert("Criança adicionada!");
     } else{
         const nome = frm.inNome.value;
-        const idade = Number(frm.inIdade.value);
-        if(verificaExistencia(nome)){
-            alert("true");
-        } else {
-            alert("false");
+        if (criancas.some(crianca => crianca.nome === nome)){
+            alert(`criança com nome ${nome} já esta cadastradas`);
+        } else{
+            const idade = Number(frm.inIdade.value);
+            criancas.push({nome: nome, idade: idade});
+            alert("Criança adicionada!");
         }
 
     }
     limparCampos();
 })
 
-function verificaExistencia(a){
-    let teste = criancas.some(crianca => crianca.nome === a)
-    return teste;
-}
+frm.btListarTodos.addEventListener("click", () => {
+    let lista = "";  
+  for (const crianca of criancas) {
+    const { nome, idade } = crianca;
+    lista += nome + " - " + idade + " anos\n";
+  }
+    resp.innerText = lista   
+})
+
+frm.btResumirPorIdade.addEventListener("click", () => {
+    let lista = "";
+    const idadeFiltrada = Number(prompt("Digite a idade das crianças a buscar: "));
+    const criancasFiltradas = criancas.filter( x => x.idade <= idadeFiltrada);
+    for (const crianca of criancasFiltradas){
+        const { nome, idade} = crianca;
+        lista += nome + " - " + idade + "anos\n";
+    }
+    resp.innerText = lista;
+})
 
 function limparCampos(){
     frm.inNome.value = "";
