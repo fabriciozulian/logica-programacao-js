@@ -36,12 +36,13 @@ frm.btListar.addEventListener("click", () => {
 frm.btMontarTabela.addEventListener("click", () => {
     const tabela = [...times];
     let jogos = "";
-    while(tabela.length > 0){
-        jogos += `${tabela[0].nome} x ${tabela[tabela.length - 1].nome}\n`;
-        tabela.shift();
-        tabela.pop();
-        if(tabela.length === 1){
-            break
+    if(tabela.length%2 !== 0){
+        alert("Não é possível formar tabela com número ímpar de times cadastrados");
+    } else{
+        while(tabela.length > 0){
+            jogos += `${tabela[0].nome} x ${tabela[tabela.length - 1].nome}\n`;
+            tabela.shift();
+            tabela.pop();
         }
     }
     resp.innerText = jogos;
