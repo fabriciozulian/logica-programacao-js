@@ -10,23 +10,26 @@
     <img src="img/ex7_8.jpg">
     <h1>Calculador juros</h1>
     <form>
-        <a>
-            Valor da conta:
-            <input type="number" id="inValorConta" required>
-        </a>
-        <a>
-            Data de vencimento:
-            <input type="date" id="inDataVencimento" required>
-        </a>
-        <a>
-            Percentual de juros:
-            <input type="number" id="inPercentualJuros" required>
-        </a>
-        <a>
-            Percentual Multa:
-            <input type="number" id="inPercentualMulta" required>
-        </a>
-        <input type="submit" value="Calcular">
+        <div style="display: flex; flex-direction: column; padding: 0 0 15px 0;">
+
+            <a>
+                Valor da conta:
+                <input type="number" id="inValorConta" required>
+            </a>
+            <a>
+                Data de vencimento:
+                <input type="date" id="inDataVencimento" required>
+            </a>
+            <a>
+                Valor de juros:
+                <input type="number" id="inJuros" readonly>
+            </a>
+            <a>
+                Valor multa:
+                <input type="number" id="inMulta" readonly>
+            </a>
+        </div>
+            <input type="submit" value="Calcular">
     </form>
     <p id="inResultado">
 

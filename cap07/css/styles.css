@@ -4,3 +4,7 @@ h1 { border-bottom-style: inset; }
 .alinha-direita { text-align: right; }
 .oculta { display: none; }
 .exibe { display: block; }
+
+a {
+    padding: 0 0 15px 0;
+}
