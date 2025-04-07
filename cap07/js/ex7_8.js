@@ -9,6 +9,7 @@ frm.addEventListener("submit", (e) => {
     e.preventDefault();
     const valor = Number(frm.inValorConta.value);
     const dataVencimento = frm.inDataVencimento.value;
+    console.log(dataVencimento);
     const dataHoje = new Date();
     const dataVenc = new Date();
     
@@ -20,7 +21,7 @@ frm.addEventListener("submit", (e) => {
     
 
 
-    const atraso = dataVenc - dataHoje;
+    const atraso = dataHoje - dataVenc;
     console.log(atraso);
     let multa = 0;
     let juros = 0;
