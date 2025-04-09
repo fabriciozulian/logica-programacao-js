@@ -8,4 +8,8 @@ select { width: 150px; }
 .detalhes { width: 380px; }
 .oculta { display: none; }
 .exibe { display: inline; }
-.exibe-linha { display: block; }  /* para exibir no último exercício, o parágrafo em uma linha */
+.exibe-linha { display: block; }
+label {
+    display: block;
+    margin-bottom: 10px;
+}
