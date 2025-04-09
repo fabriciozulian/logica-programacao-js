@@ -17,8 +17,8 @@ frm.btCalcula.addEventListener("click", (e) => {
     const dia = dataVencimento.getDate();
 
     dataVencimento.setDate(dia + 90);
-    const mes = dataVencimento.getMonth() + 1
-    const ano = dataVencimento.getFullYear()
+    const mes = dataVencimento.getMonth() + 1;
+    const ano = dataVencimento.getFullYear();
 
     result.innerText = "Data Limite para Pagto com Desconto: " + (dia < 10 ? "0" + dia : dia) + "/" + (mes < 10 ? "0" + mes : mes) + "/" + ano;
     result.innerText += "\nValor com Desconto R$: " + comDesconto.toFixed(2);
